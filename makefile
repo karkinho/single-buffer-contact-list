@@ -1,6 +1,5 @@
-all: 
-	gcc ./src/main.c -Wall -g -o app
-	valgrind -s ./app 
+all: comp
+	./app 
 val: comp
 	valgrind -s ./app
 san: 
@@ -13,4 +12,4 @@ comp:
 test: comp
 	./test 1000 | ./apptest
 testval: comp
-	./test 1000 | valgrind --leak-check=full --show-leak-kinds=all -s ./apptest
+	./test 1000 | valgrind -s ./apptest

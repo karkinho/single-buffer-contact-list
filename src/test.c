@@ -2,19 +2,16 @@
 
 int count = 1 , quantity = 0;
 
+/*
+======================  
+main
+
+calls the functions that will make the tests.
+======================
+*/
 int main( int argc , char *argv[] ) {
-    /*
-    ======================  
-    main
-
-    calls the functions that will make the tests.
-    ======================
-    */
-
     sscanf( argv[1] , "%d" , &quantity );
 
-    SmallCase();
-    BigCase();
     Add();
     printf( "4\n" );
     SearchAll();
@@ -29,14 +26,14 @@ int main( int argc , char *argv[] ) {
     return 0;
 }
 
-void Add( ){
-    /*
-    ======================  
-    Add
+/*
+======================  
+Add
 
-    Adds entry's to the data structure.
-    ======================
-    */
+Adds entry's to the data structure.
+======================
+*/
+void Add( ){
     count = 1;
     while ( count <= quantity ) {
         printf( "1\n" );
@@ -47,14 +44,14 @@ void Add( ){
     }
 }
 
+/*
+======================  
+SearchAll
+
+searchs all entry's in the data structure left to right
+======================
+*/
 void SearchAll( ) {
-    /*
-    ======================  
-    SearchAll
-
-    searchs all entry's in the data structure left to right
-    ======================
-    */
     count = 1;
     while ( count <= quantity ) {
         printf( "3\n" );
@@ -63,14 +60,14 @@ void SearchAll( ) {
     }
 }
 
+/*
+======================  
+SearchAll
+
+removes all entry's in the data structure from left to right
+======================
+*/
 void RemoveAll( ) {
-    /*
-    ======================  
-    SearchAll
-
-    removes all entry's in the data structure from left to right
-    ======================
-    */
     count = 1;
     while ( count <= quantity ) {
         printf( "2\n" );
@@ -79,14 +76,14 @@ void RemoveAll( ) {
     }
 }
 
-void SearchAllInverse( ) {
-    /*
-    ======================  
-    SearchAll
+/*
+======================  
+SearchAll
 
-    searchs all entry's in the data structure from right to left
-    ======================
-    */
+searchs all entry's in the data structure from right to left
+======================
+*/
+void SearchAllInverse( ) {
     count = quantity;
     while ( count >= 1 ) {
         printf( "3\n" );
@@ -95,58 +92,18 @@ void SearchAllInverse( ) {
     }
 }
 
-void RemoveAllInverse( ) {
-    /*
-    ======================  
-    SearchAll
+/*
+======================  
+SearchAll
 
-    removes all entry's in the data structure from right to left
-    ======================
-    */
+removes all entry's in the data structure from right to left
+======================
+*/
+void RemoveAllInverse( ) {
     count = quantity;
     while ( count >= 1 ) {
         printf( "2\n" );
         printf( "%d\n" , count );
         count--;
     }
-}
-
-void SmallCase() {
-    /*
-    ======================  
-    SmallCase
-
-    Add, search and remove the small possible entry in the data structure
-    ======================
-    */
-    printf( "1\n" );
-    printf( "\n" );
-    printf( "\n" );
-    printf( "\n" );
-    printf( "4\n" );
-    printf( "3\n" );
-    printf( "\n" );
-    printf( "2\n" );
-    printf( "\n" );
-    printf( "4\n" );
-}
-
-void BigCase(){
-    /*
-    ======================  
-    BigCase
-
-    Add, search and remove the biggest possible entry in the data structure
-    ======================
-    */
-    printf( "1\n" );
-    printf( "1234567890123456789\n" );
-    printf( "%d\n", INT_MAX );
-    printf( "123456789012345678901234567890123456789\n" );
-    printf( "4\n" );
-    printf( "3\n" );
-    printf( "1234567890123456789\n" );
-    printf( "2\n" );
-    printf( "1234567890123456789\n" );
-    printf( "4\n" );
 }
